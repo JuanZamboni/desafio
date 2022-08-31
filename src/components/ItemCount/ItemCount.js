@@ -22,11 +22,12 @@ const ItemCount = () => {
   }
 
  const handleSaludar = () => {
-  if (saludar){
-    setSaludar(false)
-  } else {
-   setSaludar(true)
- }
+ setSaludar(!saludar)
+  // if (saludar){
+   // setSaludar(false)
+  // } else {
+   //setSaludar(true)
+ //}
  
 }
   return (
@@ -42,7 +43,12 @@ const ItemCount = () => {
         <button onClick={handleSumar} className="btn btn-primary">+</button>
 
          <hr/>
-         <button onClick={handleSaludar} className="btn btn-primary">{saludar ? "Hola!" : "Chau!"}</button>
+         <button
+          onClick={handleSaludar} 
+          className={saludar ? "btn btn-success" : "btn btn-info"}>
+          
+          {saludar ? "Hola!" : "Chau!"}
+          </button>
     </div>
   )
 }
