@@ -1,15 +1,15 @@
 
 import { Navbar } from './components/Navbar/Navbar'
-import CartWidget from './components/CartWidget';
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount'
 import './App.css';
 
 const App = () => {
   return (
     <div>
     <Navbar/>
-    <CartWidget/>
     <ItemListContainer cliente="cliente"/>
+    <ItemCount/>
     </div>
   );
 }
