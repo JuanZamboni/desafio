@@ -1,5 +1,5 @@
  import React from 'react'
- import { useState } from 'react'
+ import { useState, useEffect } from 'react'
 
 const ItemCount = () => {
 
@@ -30,11 +30,27 @@ const ItemCount = () => {
  //}
  
 }
+
+useEffect( () => {
+  console.log("Contador Montado!")
+   return () => {
+    console.log("Contador desmontado!")
+   }
+  }, [])
+
+  useEffect( () => {
+  
+  if (counter % 2 === 0) {
+    console.log(counter)
+  }
+  },[counter])
+
+
   return (
 
     <div className='container my-5'>
 
-      <h2>Contador</h2>
+      <h2>Stock disponible</h2>
 
       <hr/>
         
@@ -47,7 +63,7 @@ const ItemCount = () => {
           onClick={handleSaludar} 
           className={saludar ? "btn btn-success" : "btn btn-info"}>
           
-          {saludar ? "Hola!" : "Chau!"}
+          {saludar ? "Agregar" : "Agregado"}
           </button>
     </div>
   )
