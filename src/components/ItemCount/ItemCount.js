@@ -41,7 +41,7 @@ const ItemCount = () => {
         <button onClick={handleRestar} className="btn btn-primary">-</button>
         <span className="mx-2">{counter}</span>
         <button onClick={handleSumar} className="btn btn-primary">+</button>
-
+        <p>Ultimo click:{new Date().toLocaleString()}</p>
          <hr/>
          <button
           onClick={handleSaludar} 
