@@ -1,6 +1,5 @@
 
 import { Navbar } from './components/Navbar/Navbar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Saludo from './components/Saludo/Saludo';
 import ItemCount from './components/ItemCount/ItemCount';
 import { useState } from 'react';
