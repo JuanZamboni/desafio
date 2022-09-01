@@ -31,19 +31,19 @@ const ItemCount = () => {
  
 }
 
-useEffect( () => {
-  console.log("Contador Montado!")
-   return () => {
-    console.log("Contador desmontado!")
-   }
-  }, [])
+//useEffect( () => {
+  //console.log("Contador Montado!")
+  // return () => {
+   // console.log("Contador desmontado!")
+  // }
+ // }, [])
 
-  useEffect( () => {
+  //useEffect( () => {
   
-  if (counter % 2 === 0) {
-    console.log(counter)
-  }
-  },[counter])
+  //if (counter % 2 === 0) {
+   // console.log(counter)
+ // }
+ // },[counter])
 
 
   return (

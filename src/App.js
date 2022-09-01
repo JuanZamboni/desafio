@@ -4,6 +4,7 @@ import Saludo from './components/Saludo/Saludo';
 import ItemCount from './components/ItemCount/ItemCount';
 import { useState } from 'react';
 import './App.css';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 const App = () => {
 
@@ -22,6 +23,8 @@ const App = () => {
 
     <Navbar/>
     <Saludo cliente="cliente"/>
+
+    <ItemListContainer/>
 
     <button className="btn btn-primary" onClick={handleShow}>Ver Stock</button>
 
