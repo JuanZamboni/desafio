@@ -3,7 +3,7 @@
 
 const ItemCount = () => {
 
-   const [counter, setCounter] = useState(0)
+   const [counter, setCounter] = useState(1)
    const [saludar, setSaludar] = useState(true)
   
 
@@ -14,7 +14,7 @@ const ItemCount = () => {
     }
 
     const handleRestar = () => {
-      if (counter > 0) {
+      if (counter > 1) {
       setCounter(counter - 1)
       console.log(counter)
     }
