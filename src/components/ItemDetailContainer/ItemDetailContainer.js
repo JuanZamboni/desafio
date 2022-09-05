@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 //import pedirDatos from './pedirDatos'
 
-const ItemDetailContainer = ({id}) => {
+const ItemDetailContainer = () => {
 
  //const [item, setItem] = useState(null)
 
