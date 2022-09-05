@@ -33,6 +33,8 @@ const App = () => {
       <Routes>
        <Route path='/' element={<ItemListContainer/>}/>
 
+       <Route path='/productos/:categoryId' element={<ItemListContainer/>}/>
+       
       </Routes>
 
 
@@ -42,7 +44,7 @@ const App = () => {
 
         <ItemListContainer/>
 
-         <button className="btn btn-primary" onClick={handleShow}>Ver Stock</button>
+        <button className="btn btn-primary" onClick={handleShow}>Ver Stock</button>
 
         {
           show ? <ItemCount/> : null
