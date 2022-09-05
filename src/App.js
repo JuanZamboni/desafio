@@ -6,6 +6,7 @@ import { useState } from 'react';
 import './App.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
 
@@ -20,20 +21,34 @@ const App = () => {
 
   return (
 
+    
+
     <div>
 
-    <Navbar/>
-    <Saludo cliente="cliente"/>
 
-    <ItemDetailContainer id={1}/>
+    <BrowserRouter>
 
-    <ItemListContainer/>
+     <Navbar/>
+ 
+      <Routes>
+       <Route path='/' element={<ItemListContainer/>}/>
 
-    <button className="btn btn-primary" onClick={handleShow}>Ver Stock</button>
+      </Routes>
 
-    {
-    show ? <ItemCount/> : null
-    }
+
+      <Saludo cliente="cliente"/>
+
+       <ItemDetailContainer id={1}/>
+
+        <ItemListContainer/>
+
+         <button className="btn btn-primary" onClick={handleShow}>Ver Stock</button>
+
+        {
+          show ? <ItemCount/> : null
+         }
+
+    </BrowserRouter>
 
     </div>
   );
