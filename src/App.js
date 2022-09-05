@@ -5,6 +5,7 @@ import ItemCount from './components/ItemCount/ItemCount';
 import { useState } from 'react';
 import './App.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 const App = () => {
 
@@ -23,6 +24,8 @@ const App = () => {
 
     <Navbar/>
     <Saludo cliente="cliente"/>
+
+    <ItemDetailContainer id={1}/>
 
     <ItemListContainer/>
 

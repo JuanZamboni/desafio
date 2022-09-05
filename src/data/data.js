@@ -2,7 +2,7 @@ export const stock = [
      
     {id:1, nombre:"Monitor Gaming",  descripcion:"Monitor de 144hz, 24 pulgadas, ultra hd, 4k", imagen:"https://via.placeholder.com/300.png", stock:1, precio:35000},
     {id:2, nombre:"Procesador amd", descripcion:"Ryzen 5 5600 4.2 Ghz AM4 ", imagen:"https://via.placeholder.com/300.png", stock:2, precio:38000},
-    {id:3, nombre:"RAM HYPERX",  descripcion:" Memoria 16GB DDR4 3200", imagen:"ram.https://via.placeholder.com/300", stock:3, precio:15000},
+    {id:3, nombre:"RAM HYPERX",  descripcion:" Memoria 16GB DDR4 3200", imagen:"https://via.placeholder.com/300", stock:3, precio:15000},
     {id:4, nombre:"GRAFICA MSI",  descripcion:"MSI GEFORCE RTX 3090 VENTUS", imagen:"https://via.placeholder.com/300.png", stock:4, precio:340000},
     {id:5, nombre:"Silla Gaming", descripcion:"Silla soul, reclinable, almohadones, apoya brazos", imagen:"https://via.placeholder.com/300.png", stock:5, precio:65000},
     {id:6, nombre:"Gabinete",  descripcion:"Gabinete mediano, rgb", imagen:"https://via.placeholder.com/300.png", stock:6, precio:25000},
