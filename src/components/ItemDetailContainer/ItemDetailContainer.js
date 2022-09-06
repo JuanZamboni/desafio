@@ -29,7 +29,7 @@ setLoading(true)
         setLoading(false)
        })
 
- },[])
+ },)
 
 
   return (
@@ -40,11 +40,11 @@ setLoading(true)
             : <ItemDetail item={item}/>
 
 
-}
+       }
         
         
         </div>
-  )
-}
+  )}
+      
 
 export default ItemDetailContainer
