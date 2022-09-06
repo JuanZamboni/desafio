@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { pedirDatos } from '../../helpers/pedirDatos'
+import { pedirDatos } from "../../helpers/pedirDatos"
 import ItemList from '../ItemList/ItemList'
-
 import { useParams } from 'react-router-dom'
+
 const ItemListContainer = () => {
 
    const [productos, setProductos] = useState([])
+   const [loading, setLoading] = useState(true)
 
    const { categoryId } = useParams()
 
@@ -14,6 +15,7 @@ const ItemListContainer = () => {
 
 
    useEffect(() => {
+    setLoading(true)
         pedirDatos() 
           .then( (res) => {
             if (!categoryId){
@@ -29,7 +31,7 @@ const ItemListContainer = () => {
            console.log(err)
           })
           .finally (() => {
-           
+           setLoading(false)
           })
    }, [categoryId])
 
@@ -37,7 +39,12 @@ const ItemListContainer = () => {
   return (
 
   <div>
-    <ItemList productos={productos}/>
+    {
+        loading 
+        ? <h2>Cargando...</h2>
+        : <ItemList productos={productos}/>
+    }
+    
   </div>
   )
 }
