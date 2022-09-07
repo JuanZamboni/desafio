@@ -5,7 +5,7 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 
 const ItemDetailContainer = ( ) => {
 
- const [item, setItem] = useState(null)
+ const [item, setItem] = useState()
  const [loading, setLoading] = useState(true)
  const {itemId} = useParams()
  console.log(itemId)
@@ -29,7 +29,7 @@ setLoading(true)
         setLoading(false)
        })
 
- },)
+ },[itemId])
 
 
   return (

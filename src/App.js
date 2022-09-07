@@ -41,7 +41,7 @@ const App = () => {
 
       <Saludo cliente="cliente"/>
 
-       <ItemDetailContainer id={1}/>
+       
 
        
 

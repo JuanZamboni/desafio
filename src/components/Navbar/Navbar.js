@@ -17,7 +17,7 @@ export const Navbar = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to='/productos/inicio'>INICIO</Link>
+          <Link className="nav-link active" aria-current="page" to='/'>INICIO</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to=''>NOSOTROS</Link>
