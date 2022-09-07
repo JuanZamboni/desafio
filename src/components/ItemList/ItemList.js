@@ -6,7 +6,7 @@ import Item from "../Item/Item";
 
 const ItemList = ( {productos = []} ) => {
   return (
-    <div className="container my-5">
+    <div className="container my-4">
 
       <h2>Productos</h2>
 
