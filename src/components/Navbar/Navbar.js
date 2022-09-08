@@ -45,16 +45,20 @@ export const Navbar = () => {
         </li>
       </ul>
       <form className="d-flex" role="search">
-        <button className="btn btn-primary" type="submit">Buscar</button>
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
+        <button className="btn btn-primary mx-2" type="submit">Buscar</button>
+        <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"></input>
         <button className="btn btn-outline-success" type="submit"><CartWidget/></button>
       </form>
     </div>
   </div>
 </nav>
 
-           
-
           </header>
+
+
+
+
+
+
     )
    }

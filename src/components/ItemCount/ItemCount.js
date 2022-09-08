@@ -46,26 +46,26 @@ const ItemCount = () => {
  // },[counter])
 
 
-  return (
+  //return (
 
-    <div className='container my-5'>
+    //<div className='container my-5'>
 
-      <h2>Stock disponible</h2>
+      //<h2>Stock disponible</h2>
 
-      <hr/>
+      //<hr/>
         
-        <button onClick={handleRestar} className="btn btn-primary">-</button>
-        <span className="mx-2">{counter}</span>
-        <button onClick={handleSumar} className="btn btn-primary">+</button>
+        //<button onClick={handleRestar} className="btn btn-primary">-</button>
+        //<span className="mx-2">{counter}</span>
+        //<button onClick={handleSumar} className="btn btn-primary">+</button>
    
-         <hr/>
-         <button
-          onClick={handleSaludar} 
-          className={saludar ? "btn btn-success" : "btn btn-info"}>
+         //<hr/>
+         //<button
+          //onClick={handleSaludar} 
+          //className={saludar ? "btn btn-success" : "btn btn-info"}>
           
-          {saludar ? "Agregar" : "Agregado"}
-          </button>
-    </div>
-  )
+          //{saludar ? "Agregar" : "Agregado"}
+          //</button>
+    //</div>
+  //)
 }
 export default ItemCount
