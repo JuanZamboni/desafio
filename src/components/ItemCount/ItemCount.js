@@ -1,71 +1,49 @@
- import React from 'react'
- import { useState} from 'react'
+import React from 'react'
+ 
+ 
+const ItemCount = ({max, counter, setCounter, handleAgregar}) => {
 
-const ItemCount = () => {
 
-   const [counter, setCounter] = useState(1)
-   const [saludar, setSaludar] = useState(true)
+
+
   
+  const handleRestar = () => {
+    if (counter > 1) {
+    setCounter(counter - 1)
+  }
+
+}
 
 
     const handleSumar = () => {
+      if (counter <max) {
       setCounter(counter + 1)
-      console.log(counter)
+      }
     }
 
-    const handleRestar = () => {
-      if (counter > 1) {
-      setCounter(counter - 1)
-      console.log(counter)
-    }
+    
 
-  }
+  return (
 
- const handleSaludar = () => {
- setSaludar(!saludar)
-  // if (saludar){
-   // setSaludar(false)
-  // } else {
-   //setSaludar(true)
- //}
- 
-}
-
-//useEffect( () => {
-  //console.log("Contador Montado!")
-  // return () => {
-   // console.log("Contador desmontado!")
-  // }
- // }, [])
-
-  //useEffect( () => {
-  
-  //if (counter % 2 === 0) {
-   // console.log(counter)
- // }
- // },[counter])
-
-
-  //return (
-
-    //<div className='container my-5'>
-
-      //<h2>Stock disponible</h2>
-
-      //<hr/>
-        
-        //<button onClick={handleRestar} className="btn btn-primary">-</button>
-        //<span className="mx-2">{counter}</span>
-        //<button onClick={handleSumar} className="btn btn-primary">+</button>
+    <div className='container my-5'>
    
-         //<hr/>
-         //<button
-          //onClick={handleSaludar} 
-          //className={saludar ? "btn btn-success" : "btn btn-info"}>
-          
-          //{saludar ? "Agregar" : "Agregado"}
-          //</button>
-    //</div>
-  //)
-}
+        
+       <button onClick={handleRestar} className="btn btn-primary">-</button>
+       <span className="mx-3">{counter}</span>
+       <button onClick={handleSumar} className="btn btn-primary">+</button>
+   
+         
+          <br/>
+
+       <button onClick={handleAgregar} className="btn btn-primary my-2"> 
+
+     Agregar al carrito
+
+     </button>
+
+
+   </div>
+
+ )
+  }
 export default ItemCount
