@@ -1,8 +1,10 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
-import useState from 'react'
+import { useState, useContext, CartContext} from 'react'
 
 const ItemDetail = ({item}) => {
+
+  const {cart, addToCart, isInCart} =useContext(CartContext)
   
   const [cantidad, setCantidad] = useState(1)
 
@@ -14,7 +16,8 @@ const ItemDetail = ({item}) => {
       cantidad
 
     }
-    console.log(itemToCart)
+  
+  addToCart(itemToCart)
   }
 
 
@@ -27,12 +30,18 @@ const ItemDetail = ({item}) => {
                     <p> {item.stock}</p>
                     <p>{item.descripcion}</p>
                   
+{
+  isInCart(item.id)
+  ?   <Link to="/cart" className="btn btn-success">Terminar mi compra</Link>
+  :   <ItemCount
+       max={item.stock}
+       counter={cantidad}
+       setCounter={setCantidad}
+       handleAgregar={handleAgregar}
+ />
 
-                 <ItemCount max={item.stock}
-                 counter={cantidad}
-                 setCounter={setCantidad}
-                handleAgregar={handleAgregar}
-                 />
+}
+               
     </div>
   )
 }
