@@ -3,11 +3,7 @@ import { createContext } from 'react';
 import Swal from 'sweetalert2';
 import { useState } from 'react';
 
-const CartContext = () => {
-
-}
-
-export default CartContext = createContext()
+export const CartContext = createContext()
 
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
